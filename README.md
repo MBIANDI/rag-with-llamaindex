@@ -1,4 +1,6 @@
-# rag-with-llamaindex
+# 🎓 Assistant de cours NLP (TutorAI)
+
+[![Python CI](https://github.com/MBIANDI/rag-with-llamaindex/actions/workflows/ci.yml/badge.svg)](https://github.com/MBIANDI/rag-with-llamaindex/actions)
 
 Un agent IA avancé conçu pour assister les enseignants dans la gestion des questions des étudiants et la fourniture de ressources pédagogiques pertinentes.
 
@@ -114,6 +116,7 @@ data/
 ├── cours_2.pdf
 └── ressources.pdf
 ```
+Ajouter une photo à la racine et renseignez le nom dans les configs.
 
 ## 🔍 Cas d'usage
 
