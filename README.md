@@ -73,6 +73,11 @@ poetry build
 poetry shell
 ```
 
+### Déployer avec Docker
+```bash
+docker build -t llama-teacher-app .
+docker run -p 8501:8501 -e OPENAI_API_KEY=VOTRE_API_KEY llama-teacher-app
+```
 
 ## ⚙️ Configuration
 
