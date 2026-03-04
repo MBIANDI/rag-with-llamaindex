@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Optional
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -49,6 +50,19 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", case_sensitive=False, extra="ignore"
     )
+
+    # Nouveau: Configuration vidéo et voix
+    teacher_image_path: Path = Path("photo_laura.PNG")
+    video_output_dir: Path = Path("generated_videos")
+
+    # ElevenLabs pour votre voix (optionnel)
+    elevenlabs_api_key: Optional[str] = Field(..., alias="ELEVENLAB_API_KEY")
+    elevenlabs_voice_id: Optional[str] = Field(..., alias="ELEVENLAB_VOICE_ID")
+
+    # OpenAI voix fallback
+    openai_voice: str = "onyx"
+    # Streamlit spécifique
+    enable_video_response: bool = True
 
 
 # Création de l'instance
