@@ -1,30 +1,4 @@
-# Train, Predict & Weekly performance computation
-
-
-
-```mermaid
-
-flowchart TD
-    A[Départ] --> B{Mode};
-    B -->|Devoirs| C[Photo exercice];
-    C --> D[Vision-LLM];
-    D --> E[Agent spécialisé];
-    E --> F[Pistes];
-    F --> G[Élève répond];
-    G --> H{Correct?};
-    H -->|Oui| I[Félicitations];
-    H -->|Non| J[Nouvelle piste];
-    J --> G;
-
-    B -->|Révisions| K[Choix sujet];
-    K --> L[Génération quiz];
-    L --> M[Élève répond];
-    M --> N[Correction];
-    N --> O[Explications ciblées];
-    O --> P[Nouveau quiz];
-    P --> M;
-
-```
+# Workflow pour l'api
 
 ```mermaid
 sequenceDiagram
